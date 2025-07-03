@@ -1,0 +1,14 @@
+---
+// Logo component: switches between dark and light logo PNGs
+export interface Props {
+  variant?: 'dark' | 'light';
+  className?: string;
+}
+const { variant = 'dark', className = '' } = Astro.props;
+const base = import.meta.env.BASE_URL || '/';
+const src = variant === 'light' ? `${base}Anotan_Light.png` : `${base}Anotan_Dark.png`;
+const alt = 'Anotan Ventures logo';
+---
+<a href={base} aria-label="Anotan Ventures homepage" class={className} style="display:inline-block">
+  <img src={src} alt={alt} class="h-5 w-auto max-w-xs" loading="lazy" decoding="async" />
+</a> 

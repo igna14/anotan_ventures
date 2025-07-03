@@ -1,0 +1,72 @@
+---
+import Logo from './Logo.astro';
+// Footer component with contact info and studio description
+---
+
+<footer class="bg-neutral-950 text-neutral-400 py-12 px-4 sm:px-6 lg:px-8">
+	<div class="max-w-7xl mx-auto">
+		<!-- Logo at top of footer -->
+		<div class="flex justify-center mb-8">
+			<Logo variant="light" className="h-10" />
+		</div>
+		<div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+			<!-- Studio description -->
+			<div class="md:col-span-2">
+				<h3 class="text-white font-semibold text-lg mb-4">
+					Anotan Ventures
+				</h3>
+				<p class="text-neutral-400 leading-relaxed mb-6 max-w-2xl">
+					A strategy and software studio that partners with data-first startups and enterprise operators 
+					to design and ship internal tools, automation systems, and AI-native products.
+				</p>
+				<div class="flex flex-wrap gap-4 text-sm">
+					<a href="mailto:hello@anotan.ventures" class="text-neutral-400 hover:text-white transition-colors">
+						hello@anotan.ventures
+					</a>
+					<span class="text-neutral-600">•</span>
+					<span class="text-neutral-600">Based in San Francisco</span>
+				</div>
+			</div>
+			
+			<!-- Quick links -->
+			<div>
+				<h4 class="text-white font-medium mb-4">Quick links</h4>
+				<ul class="space-y-2 text-sm">
+					<li>
+						<a href="#services" class="text-neutral-400 hover:text-white transition-colors">
+							What we do
+						</a>
+					</li>
+					<li>
+						<a href="#work" class="text-neutral-400 hover:text-white transition-colors">
+							What we've built
+						</a>
+					</li>
+					<li>
+						<a href="#contact" class="text-neutral-400 hover:text-white transition-colors">
+							Get in touch
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- Bottom bar -->
+		<div class="border-t border-neutral-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
+			<div class="text-sm text-neutral-500 mb-4 sm:mb-0">
+				© 2024 Anotan Ventures. All rights reserved.
+			</div>
+			<div class="flex items-center space-x-6 text-sm">
+				<a href="https://twitter.com/anotanventures" class="text-neutral-400 hover:text-white transition-colors">
+					Twitter
+				</a>
+				<a href="https://linkedin.com/company/anotan-ventures" class="text-neutral-400 hover:text-white transition-colors">
+					LinkedIn
+				</a>
+				<a href="https://github.com/anotanventures" class="text-neutral-400 hover:text-white transition-colors">
+					GitHub
+				</a>
+			</div>
+		</div>
+	</div>
+</footer> 

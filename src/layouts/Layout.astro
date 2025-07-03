@@ -1,22 +1,54 @@
+---
+export interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Strategy and software for operators sitting on messy data, painful workflows, and big upside." } = Astro.props;
+import Logo from '../components/Logo.astro';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		
+		<!-- SEO -->
+		<title>{title} | Anotan Ventures</title>
+		<meta name="description" content={description} />
+		<meta name="robots" content="index, follow" />
+		
+		<!-- Open Graph -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
+	<body class="font-sans text-neutral-900 bg-white antialiased">
+		<!-- Sticky Header -->
+		<header class="sticky top-0 z-30 w-full bg-white/80 backdrop-blur border-b border-neutral-100">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-12" style="min-height:3rem;">
+				<Logo variant="dark" className="h-5" />
+			</div>
+		</header>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+	
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 </style>
