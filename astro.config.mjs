@@ -6,5 +6,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   base: '/anotan_ventures/',
-  site: 'https://yourusername.github.io'
+  site: 'https://igna14.github.io'
 });
