@@ -4,6 +4,9 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [tailwind()],
-  base: '/',
   site: 'https://anotan.com',
+  base: '/',
+  build: {
+    assets: '_assets'
+  }
 });
